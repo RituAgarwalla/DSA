@@ -46,8 +46,8 @@ public class AboveAverageSubarrays {
         for (int i = 0; i < n; i++) {
             double curSum = 0, remSum = sum;
             for (int j = i; j < n; j++) {
-                curSum += nums[i];
-                remSum -= nums[i];
+                curSum += nums[j];
+                remSum -= nums[j];
                 int width = j - i + 1;
                 if (curSum / width > remSum / n - width) {
                     result.add(new int[]{i, j});
